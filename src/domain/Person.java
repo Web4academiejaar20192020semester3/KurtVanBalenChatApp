@@ -214,7 +214,13 @@ public class Person {
 		this.age = age;
 	}
 
+	public String getAge(){ return age; }
+
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public String getGender() {
+		return gender;
 	}
 }
