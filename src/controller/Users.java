@@ -26,7 +26,7 @@ public class Users extends RequestHandler {
         StringBuffer stringBuffer = new StringBuffer();
         List<Person> users = array;
         Iterator iterator = users.iterator();
-        stringBuffer.append("{ \"Person\":[");
+        stringBuffer.append("[");
         while (iterator.hasNext()) {
             Person user = (Person) iterator.next();
 
@@ -40,7 +40,6 @@ public class Users extends RequestHandler {
             }
         }
         stringBuffer.append("]");
-        stringBuffer.append("}");
         return stringBuffer.toString();
     }
 }
