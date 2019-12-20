@@ -25,11 +25,11 @@ public class Users extends RequestHandler {
         try
         {
             json = mapper.writeValueAsString(array);
-            return json;
         }
         catch(Exception e)
         {
             e.printStackTrace();
         }
+        return json;
     }
 }
