@@ -33,7 +33,9 @@ public class Users extends RequestHandler {
             stringBuffer.append("{");
             stringBuffer.append("\"name\": \"" + user.getName() + "\",");
             stringBuffer.append("\"status\": \"" + user.getStatus() + "\"," );
-            stringBuffer.append("\"id\": \"" + user.getUserId() + "\"" );
+            stringBuffer.append("\"id\": \"" + user.getUserId() + "\"," );
+            stringBuffer.append("\"gender\": \"" + user.getGender() + "\"," );
+            stringBuffer.append("\"age\": \"" + user.getAge() + "\"" );
             stringBuffer.append("}");
             if (iterator.hasNext()){
                 stringBuffer.append(",");
