@@ -42,6 +42,9 @@ public class Controller extends HttpServlet {
         if (action != null) {
         	RequestHandler handler;
         	try {
+				response.setHeader("Access-Control-Allow-Headers", "*");
+				response.setHeader("Access-Control-Allow-Origin", "*");
+				response.setHeader("Access-Control-Allow-Methods", "*");
         		handler = controllerFactory.getController(action, model);
 				destination = handler.handleRequest(request, response);
         	} 
@@ -55,6 +58,7 @@ public class Controller extends HttpServlet {
         if(isJson)
         {
         	System.out.println(destination);
+			response.setContentType("application/json");
         	response.getWriter().write(destination);
 		}
         if(!isJson)
